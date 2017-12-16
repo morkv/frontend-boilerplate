@@ -1,0 +1,68 @@
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 1em;
+  line-height: 1;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+
+h1, .h1 {
+  font-size: 1.5em;
+  font-weight: 900;
+  line-height: 1;
+
+  @include media-breakpoint-up(md) {
+    //font-size: 100px;
+  }
+}
+
+h2, .h2 {
+  font-size: 1.25em;
+  font-weight: 900;
+  line-height: 1;
+
+  @include media-breakpoint-up(md) {
+    //font-size: 50px;
+  }
+}
+
+h3, .h3 {
+  font-size: 1.125em;
+
+  @include media-breakpoint-up(md) {
+    //font-size: 26px;
+  }
+}
+
+h4, .h4 {
+  font-size: 1em;
+
+  @include media-breakpoint-up(md) {
+    //font-size: 19px;
+  }
+}
+
+h5, .h5 {
+  font-size: 15px;
+}
+
+h6, .h6 {
+  font-size: 14px;
+}
+
+
+
+// Alignment
+.text-left           { text-align: left; }
+.text-right          { text-align: right; }
+.text-center         { text-align: center; }
+.text-justify        { text-align: justify; }
+.text-nowrap         { white-space: nowrap; }
+
+// Transformation
+.text-lowercase      { text-transform: lowercase; }
+.text-uppercase      { text-transform: uppercase; }
+.text-capitalize     { text-transform: capitalize; }

@@ -1,0 +1,26 @@
+//buttons styles
+
+.btn {
+  //font-family: $base-font-family;
+  //font-size: $text-regular;
+  //color: $text-color;
+  background: none;
+  font-weight: 700;
+  letter-spacing: 0.12px;
+  text-decoration: none;
+  outline: none;
+  display: inline-block;
+  vertical-align: middle;
+  user-select: none;
+  white-space: nowrap;
+  padding: 10px 30px;
+  line-height: 1;
+  height: 41px;
+  cursor: pointer;
+  transition: all .4s ease-in-out;
+
+  &--primary {  }
+
+  &--outline {  }
+
+}

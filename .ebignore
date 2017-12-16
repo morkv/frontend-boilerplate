@@ -1,0 +1,10 @@
+*
+**/*
+!/public
+!/public/*
+!/public/**/*
+!/server
+!/server/*
+!/server/**/*
+!/server.js
+!/package.json

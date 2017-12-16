@@ -1,0 +1,24 @@
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.card {
+  flex-basis: 33.333%;
+  padding: 10px;
+  box-sizing: border-box;
+  &__image {
+    height: 200px;
+    background: {
+      position: center;
+      repeat: no-repeat;
+      size: cover;
+    };
+  }
+
+  &--long {
+    flex-basis: 66.666%;
+  }
+}

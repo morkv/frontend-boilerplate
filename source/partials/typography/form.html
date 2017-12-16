@@ -1,0 +1,117 @@
+<div class="{{class}}" id="{{id}}">
+  <h2>Inputs</h2>
+
+  <div class="row">
+    <div class="col-xs-5">
+      <div class="input-wrap">
+        <input type="text">
+      </div>
+    </div>
+
+    <div class="col-sm-4">Normal</div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-5">
+      <div class="input-wrap input-wrap--focus">
+        <input type="text">
+      </div>
+    </div>
+
+    <div class="col-xs-4">Active, focus</div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-5">
+      <div class="input-wrap input-wrap--error">
+        <input type="text" value="Required">
+      </div>
+    </div>
+
+    <div class="col-xs-4">Error</div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-5">
+      <div class="input-wrap input-wrap--success">
+        <input type="text" value="Albert">
+      </div>
+    </div>
+
+    <div class="col-xs-4">Success</div>
+  </div>
+
+
+  <h2>Radio button</h2>
+
+  <label class="control control--radio">radio button <b>checked</b>
+    <input type="radio" name="example" checked="checked">
+    <span class="control__indicator"></span>
+  </label>
+
+  <label class="control control--radio">radio button <b>unchecked</b>
+    <input type="radio" name="example">
+    <span class="control__indicator"></span>
+  </label>
+
+  <label class="control control--radio">disabled radio button <b>checked</b>
+    <input type="radio" name="" checked="checked" disabled>
+    <span class="control__indicator"></span>
+  </label>
+
+  <label class="control control--radio">disabled radio button <b>unchecked</b>
+    <input type="radio" name="" disabled>
+    <span class="control__indicator"></span>
+  </label>
+
+  <div style="background: #f2f4fa; padding: 20px; width: 40%;">
+    <div class="switch">
+      <input type="radio" class="switch-input" name="view" value="week" id="week" checked>
+      <label for="week" class="switch-label switch-label-off">Woman</label>
+
+      <input type="radio" class="switch-input" name="view" value="month" id="month">
+      <label for="month" class="switch-label switch-label-on">Man</label>
+      <span class="switch-selection"></span>
+    </div>
+  </div>
+
+
+  <h2>Checkbox</h2>
+
+  <label class="control control--checkbox">Check box <b>checked</b>
+    <input type="checkbox" checked="checked"/>
+    <span class="control__indicator"></span>
+  </label>
+
+  <label class="control control--checkbox">Check box <b>unchecked</b>
+    <input type="checkbox"/>
+    <span class="control__indicator"></span>
+  </label>
+
+  <label class="control control--checkbox">Check box <b>checked</b>
+    <input type="checkbox" checked="checked" disabled />
+    <span class="control__indicator"></span>
+  </label>
+
+  <label class="control control--checkbox">Check box <b>unchecked</b>
+    <input type="checkbox" disabled/>
+    <span class="control__indicator"></span>
+  </label>
+
+
+  <h2>Select</h2>
+
+    <h4>Primary</h4>
+    <select class="js-select">
+      <option value="">All messages</option>
+      <option value="">Unread messages</option>
+      <option value="">Active people</option>
+    </select>
+
+    <h4>Select with search</h4>
+    <select class="js-select-with-search">
+      <option value="">All messages</option>
+      <option value="">Unread messages</option>
+      <option value="">Active people</option>
+    </select>
+</div>

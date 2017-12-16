@@ -1,0 +1,69 @@
+{{>documentation/documentation-head title="Documentation"}}
+<body>
+<div id="doc">
+
+  <!--NAVIGATION-->
+  <aside class="doc__sidebar">
+    <div class="doc__logo">
+      <img src="images/logo.png" alt="" class="logo">
+    </div>
+
+    <ul class="doc__nav">
+      <li><a class="component-link active" onclick="openComp(event, 'getStart')" href="#">Getting Started</a></li>
+
+      <li class="component-group">
+        <a href="#" class="group-link" onclick="openGroup(event)">Design</a>
+        <ul class="doc__subnav">
+          <li><a class="component-link" onclick="openComp(event, 'typography')" href="#">Typography</a></li>
+          <li><a class="component-link" onclick="openComp(event, 'color-palette')" href="#">Color Palette</a></li>
+        </ul>
+      </li>
+
+      <li class="component-group">
+        <a href="#" class="group-link" onclick="openGroup(event)">Modules</a>
+        <ul class="doc__subnav">
+          <li><a class="component-link" onclick="openComp(event, 'links')" href="#">Links</a></li>
+          <li><a class="component-link" onclick="openComp(event, 'buttons')" href="#">Buttons</a></li>
+          <li><a class="component-link" onclick="openComp(event, 'forms')" href="#">Form</a></li>
+        </ul>
+      </li>
+
+      <li class="component-group">
+        <a href="#" class="group-link" onclick="openGroup(event)">Components</a>
+        <ul class="doc__subnav">
+          <li><a class="component-link" onclick="openComp(event, 'card')" href="#">Cards</a></li>
+        </ul>
+      </li>
+    </ul>
+
+    <div class="doc__footer">
+      <span>Created by</span>
+      <a href="https://qubstudio.com/" target="_blank"><img src="images/documentation/qub-logo.svg" alt=""></a>
+    </div>
+  </aside>
+
+
+
+  <!--COMPONENTS-->
+  <div class="doc__content" id="docContent" data-content-title="Getting started">
+    <div class="component" id="getStart">
+      <div class="centered">
+        <h3>Welcome to</h3>
+        <h1>Meticulous <br> documentation</h1>
+        <h2>Design requirements for your project</h2>
+
+        <button onclick="openComp(event, 'typography')" class="qub-btn component-link">Get Started</button>
+      </div>
+    </div>
+    {{>typography/typography class="component" id="typography"}}
+    {{>typography/colors class="component" id="color-palette"}}
+    {{>typography/links class="component" id="links"}}
+    {{>typography/buttons class="component" id="buttons"}}
+    {{>typography/form class="component" id="forms"}}
+    {{>documentation/card class="component" id="card"}}
+  </div>
+</div>
+
+{{>documentation/documentation-footer}}
+
+</body>
