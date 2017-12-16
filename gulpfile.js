@@ -23,32 +23,38 @@ const buildpath = {
   js: 'public/js/',
   css: 'public/css/',
   images: 'public/',
-  favicon: 'public/'
+  favicon: 'public/',
+  icons: 'public/',
+  fonts: 'public/'
 };
 
 const stylesheets = ['source/assets/sass/style.scss', 'source/assets/sass/documentation.scss'];
 
-gulp.task('copy', ['copy:favicon', 'copy:images', 'copy:robots']);
+gulp.task('copy', ['copy:favicon', 'copy:images', 'copy:robots', 'copy:fonts', 'copy:icons']);
 
 gulp.task('copy:robots', function (cb) {
   return gulp.src(['source/assets/robots.txt'])
-    .pipe(copy(buildpath.main, {
-      prefix: 2
-    }));
+    .pipe(copy(buildpath.main, {prefix: 2}));
 });
 
 gulp.task('copy:favicon', function (cb) {
   return gulp.src(['source/assets/favicon/**/*'])
-    .pipe(copy(buildpath.favicon, {
-      prefix: 2
-    }));
+    .pipe(copy(buildpath.favicon, {prefix: 2}));
 });
 
 gulp.task('copy:images', function (cb) {
   return gulp.src(['source/assets/images/**/*'])
-    .pipe(copy(buildpath.images, {
-      prefix: 2
-    }));
+    .pipe(copy(buildpath.images, {prefix: 2}));
+});
+
+gulp.task('copy:fonts', function (cb) {
+  return gulp.src(['source/assets/fonts/**/*'])
+    .pipe(copy(buildpath.fonts, {prefix: 2}));
+});
+
+gulp.task('copy:icons', function (cb) {
+  return gulp.src(['source/assets/icons/**/*'])
+    .pipe(copy(buildpath.icons, {prefix: 2}));
 });
 
 

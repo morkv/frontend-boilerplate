@@ -1,7 +1,7 @@
 {
-  "name": "qub-frontend-boilerplate",
-  "author": "v.bodnar@qubstudio.com",
-  "description": "QUB Frontend boilerplate",
+  "name": "frontend-boilerplate",
+  "author": "mrdshaggy@gmail.com",
+  "description": "frontend boilerplate",
   "version": "1.0.0",
   "private": true,
   "dependencies": {

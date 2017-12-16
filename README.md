@@ -1,4 +1,4 @@
-# QUB HTML Boilerplate
+# HTML Boilerplate
 
 The boilerplate for HTML templates. 
 
