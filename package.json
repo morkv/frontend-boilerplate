@@ -2,7 +2,7 @@
   "name": "frontend-boilerplate",
   "author": "mrdshaggy@gmail.com",
   "description": "frontend boilerplate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "dependencies": {
     "basic-auth": "^1.1.0",
