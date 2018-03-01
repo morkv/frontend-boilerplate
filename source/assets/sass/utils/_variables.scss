@@ -2,6 +2,19 @@
 
 //fonts
 
+//grid columns
+$flex-columns: 12;
+$grid-columns: 12;
+$flex-row-space: 15px;
+$flex-col-space: 15px;
+$grid-row-space: 15px;
+$grid-col-space: 15px;
+
+//basic spacers
+$spacer:   15px;
+$spacer-x: $spacer;
+$spacer-y: $spacer;
+
 //screens
 //== Media queries breakpoints
 //

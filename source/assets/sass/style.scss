@@ -1,11 +1,14 @@
 //plugins
-@import "plugins/bootstrap";
+//@import "plugins/bootstrap";
 
 //utils
+@import 'utils/normalize';
 @import 'utils/variables';
 @import "utils/breakpoints";
 @import "utils/mixins";
 @import "utils/spacers";
+@import "utils/flex";
+@import "utils/grid";
 
 //base
 @import 'base/global';
@@ -20,3 +23,5 @@
 @import "modules/card";
 
 //layouts
+@import "layouts/header";
+@import "layouts/footer";
