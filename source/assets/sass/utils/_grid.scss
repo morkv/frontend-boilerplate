@@ -1,0 +1,35 @@
+// basic grid row styles mixin
+@mixin gridrow {
+  display: grid;
+  grid-column-gap: $grid-col-space;
+  grid-row-gap: $grid-row-space;
+  align-items: start;
+}
+
+[class*="row-grid"] {
+  @include gridrow;
+}
+
+// Simple class="row-grid" will not create columns, you will just get a rows with grid-row-gap between elements
+.row-grid {
+  @include gridrow;
+
+  // row modifiers
+  &--norg {  grid-row-gap: 0;  }
+  &--nocg {  grid-column-gap: 0;  }
+
+  // row alignment
+  &--center {  align-items: center;  }
+  &--stretch {  align-items: stretch;  }
+}
+
+//
+// Create list of classes like: '.row-grid-1, .row-grid-2, etc...' and sets a number of columns for row.
+// You can use them like class="row-grid row-grid-12", but also you can use it separately like class="row-grid-12"
+// and it will work.
+//
+@for $i from 1 through $flex-columns {
+  .row-grid-#{$i} {
+    grid-template-columns: repeat($i, calc((100% - #{$grid-row-space} * (#{$i} - 1)) / #{$i}))
+  }
+}

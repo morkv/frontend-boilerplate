@@ -1,0 +1,144 @@
+
+
+// Grid layout
+.ha-grid-row
+  display: grid
+  grid-column-gap: 20px
+  align-items: start
+  &.mod-row-gap
+    grid-row-gap: 20px
+  &.mod-vert-align-mid
+    align-items: center
+  &.mod-col-sm-2
+    grid-template-columns: repeat(2, calc((100% - 20px) / 2))
+  &.mod-col-sm-3
+    grid-template-columns: repeat(3, calc((100% - 20px * 2) / 3))
+  &.mod-col-sm-4
+    grid-template-columns: repeat(4, calc((100% - 20px * 3) / 4))
+  &.mod-col-sm-5
+    grid-template-columns: repeat(5, calc((100% - 20px * 4) / 5))
+  .mod-span-sm-1
+    grid-column: span 1
+  .mod-span-sm-2
+    grid-column: span 2
+  .mod-span-sm-3
+    grid-column: span 3
+  .mod-span-sm-4
+    grid-column: span 4
+  .mod-span-sm-5
+    grid-column: span 5
+  &.mod-align-sm-c1
+    & > *
+      grid-column-start: 1
+    & > .mod-span-sm-2
+      grid-column-end: 3
+    & > .mod-span-sm-3
+      grid-column-end: 4
+    & > .mod-span-sm-4
+      grid-column-end: 5
+    & > .mod-span-sm-5
+      grid-column-end: 6
+  @media(min-width: $sm-screen + 1)
+    &.mod-col-md-2
+      grid-template-columns: repeat(2, calc((100% - 20px) / 2))
+    &.mod-col-md-3
+      grid-template-columns: repeat(3, calc((100% - 20px * 2) / 3))
+    &.mod-col-md-4
+      grid-template-columns: repeat(4, calc((100% - 20px * 3) / 4))
+    &.mod-col-md-5
+      grid-template-columns: repeat(5, calc((100% - 20px * 4) / 5))
+    .mod-span-md-1
+      grid-column: span 1
+    .mod-span-md-2
+      grid-column: span 2
+    .mod-span-md-3
+      grid-column: span 3
+    .mod-span-md-4
+      grid-column: span 4
+    .mod-span-md-5
+      grid-column: span 5
+    &.mod-align-md-c1
+      & > *
+        grid-column-start: 1
+      & > .mod-span-md-2
+        grid-column-end: 3
+      & > .mod-span-md-3
+        grid-column-end: 4
+      & > .mod-span-md-4
+        grid-column-end: 5
+      & > .mod-span-md-5
+        grid-column-end: 6
+  @media(min-width: $md-screen + 1)
+    &.mod-col-2
+      grid-template-columns: repeat(2, calc((100% - 20px) / 2))
+      &.mod-border-between
+        @media (min-width: 1024px)
+          grid-gap: 50px
+          grid-template-columns: repeat(2, calc((100% - 50px) / 2));
+          position: relative
+          &:after
+            content: ''
+            height: 100%
+            position: absolute
+            left: 50%
+            top: 0
+            border-right: 1px solid rgba($color-text-additional, .4)
+    &.mod-col-3
+      grid-template-columns: repeat(3, calc((100% - 20px * 2) / 3))
+    &.mod-col-4
+      grid-template-columns: repeat(4, calc((100% - 20px * 3) / 4))
+    &.mod-col-5
+      grid-template-columns: repeat(5, calc((100% - 20px * 4) / 5))
+    &.mod-col-6
+      grid-template-columns: repeat(6, calc((100% - 20px * 5) / 6))
+    .mod-span-1
+      grid-column: span 1
+    .mod-span-2
+      grid-column: span 2
+    .mod-span-3
+      grid-column: span 3
+    .mod-span-4
+      grid-column: span 4
+    .mod-span-5
+      grid-column: span 5
+    &.mod-align-c1
+      & > *
+        grid-column-start: 1
+      & > .mod-span-2
+        grid-column-end: 3
+      & > .mod-span-3
+        grid-column-end: 4
+      & > .mod-span-4
+        grid-column-end: 5
+      & > .mod-span-5
+        grid-column-end: 6
+  @media(min-width: $lg-screen + 1)
+    &.mod-col-lg-3
+      grid-template-columns: repeat(3, calc((100% - 20px * 2) / 3))
+  @media(max-width: $md-screen)
+    &.mod-col-xs-2
+      grid-template-columns: repeat(2, calc((100% - 20px) / 2))
+    &.mod-col-xs-3
+      grid-template-columns: repeat(3, calc((100% - 20px * 2) / 3))
+    &.mod-col-xs-4
+      grid-template-columns: repeat(4, calc((100% - 20px * 3) / 4))
+    .mod-span-xs-1
+      grid-column: span 1
+    .mod-span-xs-2
+      grid-column: span 2
+    .mod-span-xs-3
+      grid-column: span 3
+    .mod-span-xs-4
+      grid-column: span 4
+  .mod-row-span-2
+    grid-row: span 2
+  &.mod-stretch-height
+    align-items: stretch
+  .mod-align-right
+    justify-self: end
+
+.mod-align-self-end
+  align-self: end
+// end Grid layout
+
+

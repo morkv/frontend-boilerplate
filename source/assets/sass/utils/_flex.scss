@@ -28,7 +28,7 @@
 
     // Columns modifiers
     &.col--center {  align-self: center;  }
-    &.col--left   {  align-self: flex-start;  }
+    &.col--start  {  align-self: flex-start;  }
     &.col--end    {  align-self: flex-end;  }
 
     // Set a number of columns in 'variables' to use this
@@ -44,12 +44,14 @@
 
   // content justifying
   &--between  { justify-content: space-between; }
+  &--around   { justify-content: space-around; }
   &--center   { justify-content: center; }
   &--end      { justify-content: flex-end; }
 
   // items alignment
   &--middle   { align-items: center; }
   &--bottom   { align-items: flex-end; }
+  &--top      { align-items: flex-start; }
 
   // flex row modify
   &--nowrap   { flex-wrap: nowrap; }
@@ -84,7 +86,7 @@
         @include flexcol;
 
         &.col--center {  align-self: center;  }
-        &.col--left   {  align-self: flex-start;  }
+        &.col--start  {  align-self: flex-start;  }
         &.col--end    {  align-self: flex-end;  }
 
         @for $i from 1 through $flex-columns {
@@ -95,10 +97,12 @@
       }
 
       &--between  { justify-content: space-between; }
+      &--around   { justify-content: space-around; }
       &--center   { justify-content: center; }
       &--end      { justify-content: flex-end; }
       &--middle   { align-items: center; }
       &--bottom   { align-items: flex-end; }
+      &--top      { align-items: flex-start; }
       &--nowrap   { flex-wrap: nowrap; }
       &--reverse  { flex-direction: row-reverse; }
       &--column {
@@ -109,7 +113,7 @@
       }
 
       &--gutter {
-        margin:0 -$flex-col-space*2;
+        margin: 0 -$flex-col-space*2;
         & > [class*="col"]  {
           padding-left: $flex-col-space*2;
           padding-right: $flex-col-space*2;
@@ -117,17 +121,12 @@
       }
     }
 
-    .row-flex,
-    .row-flex-xs,
-    .row-flex-sm,
-    .row-flex-md,
-    .row-flex-lg,
-    .row-flex-xl {
+    [class*="row-flex"] {
       & > [class*="col"] {
         @include flexcol;
 
         &.col-#{$breakpoint}--center {  align-self: center;  }
-        &.col-#{$breakpoint}--left   {  align-self: flex-start;  }
+        &.col-#{$breakpoint}--start  {  align-self: flex-start;  }
         &.col-#{$breakpoint}--end    {  align-self: flex-end;  }
 
         @for $i from 1 through $flex-columns {
@@ -138,10 +137,12 @@
       }
 
       &-#{$breakpoint}--between  { justify-content: space-between; }
+      &-#{$breakpoint}--around   { justify-content: space-around; }
       &-#{$breakpoint}--center   { justify-content: center; }
       &-#{$breakpoint}--end      { justify-content: flex-end; }
       &-#{$breakpoint}--middle   { align-items: center; }
       &-#{$breakpoint}--bottom   { align-items: flex-end; }
+      &-#{$breakpoint}--top      { align-items: flex-start; }
       &-#{$breakpoint}--nowrap   { flex-wrap: nowrap; }
       &-#{$breakpoint}--reverse  { flex-direction: row-reverse; }
       &-#{$breakpoint}--column {

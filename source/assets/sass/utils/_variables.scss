@@ -2,14 +2,24 @@
 
 //fonts
 
-//grid columns
+//.row-flex variables
 $flex-columns: 12;
-$grid-columns: 12;
 $flex-row-space: 15px;
 $flex-col-space: 15px;
+
+//.row-grid variables
+$grid-columns: 12;
 $grid-row-space: 15px;
 $grid-col-space: 15px;
 
+$row-grid-variables: (
+        gc: $grid-columns,
+        grs: $grid-row-space,
+        gcs: $grid-col-space,
+);
+
+//
+//
 //basic spacers
 $spacer:   15px;
 $spacer-x: $spacer;
