@@ -5,7 +5,7 @@
 @mixin flexrow {
   display: flex;
   flex-direction: row;
-  margin: 0 -$flex-col-space;
+  margin: 0 (-$flex-col-space);
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: flex-start;
@@ -38,6 +38,8 @@
     @for $i from 1 through $flex-columns {
       &.col-#{$i} {
         flex: $i;
+        //flex: 0 0 calc((100% / #{$flex-columns}) * #{$i});
+        //max-width: calc((100% / #{$flex-columns}) * #{$i});
       }
     }
   }
@@ -83,17 +85,10 @@
       @include flexrow;
 
       & > [class*="col"] {
-        @include flexcol;
 
         &.col--center {  align-self: center;  }
         &.col--start  {  align-self: flex-start;  }
         &.col--end    {  align-self: flex-end;  }
-
-        @for $i from 1 through $flex-columns {
-          &.col-#{$i} {
-            flex: $i;
-          }
-        }
       }
 
       &--between  { justify-content: space-between; }
@@ -123,7 +118,6 @@
 
     [class*="row-flex"] {
       & > [class*="col"] {
-        @include flexcol;
 
         &.col-#{$breakpoint}--center {  align-self: center;  }
         &.col-#{$breakpoint}--start  {  align-self: flex-start;  }
